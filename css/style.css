@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(220, 234, 248, 0.696);
+    font-family: 'Kanit', sans-serif;
+}
+
+header{
+    background-color: white;
+}
+
+main .container{
+    background-color: white;
+    padding: 20px 5% 10px;
+    border-radius: 10px;
+}
+
+
+.row{
+    width: 100%;
+}
+
+.btn{
+    padding: 3px 10px;
+}
+
+li{
+   padding: 10px 0px; 
+}
