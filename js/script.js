@@ -38,6 +38,10 @@ createApp({
         },
         changeTaskStatus(index){
             this.tasks[index].done = !this.tasks[index].done
+        },
+        deleteTask(index){
+            this.tasks.splice(index, 1)
+            console.log(this.tasks.length)
         }
     }
 }).mount('#app')

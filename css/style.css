@@ -24,8 +24,19 @@ main .container{
     width: 100%;
 }
 
+button{
+    margin-left: 5px;
+}
+
 .btn{
     padding: 3px 10px;
+}
+
+.delete{
+    border: none;
+    background-color: transparent;
+    margin-left: 20px;
+    vertical-align:middle;
 }
 
 li{

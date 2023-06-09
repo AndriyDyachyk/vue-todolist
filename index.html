@@ -30,8 +30,8 @@
                         <div class="content">
                             <div class="text-center">
                                 <h4>To-Do List del <span>{{dataOdierna()}}</span></h4>
-                                <div v-if="tasks.lenght === 0">
-                                    <p>Non sono presenti attività per oggi, puoi inserirne delle nuove in ogni momento.</p>
+                                <div v-if="tasks.length === 0">
+                                    <p>Non sono presenti attività per oggi, puoi inserirne delle nuove in ogni momento.<br>&#8595; Digitala qua sotto &#8595;</p>
                                 </div>
                                 <hr> 
                             </div>
@@ -42,6 +42,9 @@
                                         <div>
                                             <button class="btn" :class="task.done ? 'btn-danger' : 'btn-success'" @click="changeTaskStatus(index)">
                                                 <i :class="task.done ? 'fa-solid fa-arrows-rotate fa-flip-horizontal' : 'fa-solid fa-check'"></i>
+                                            </button>
+                                            <button class="delete" @click="deleteTask(index)">
+                                                <i class="fa-solid fa-xmark"></i>
                                             </button>
                                         </div>
                                     </div>
