@@ -31,7 +31,7 @@
                             <div class="text-center">
                                 <h4>To-Do List del <span>{{dataOdierna()}}</span></h4>
                                 <div v-if="tasks.length === 0">
-                                    <p>Non sono presenti attività per oggi, puoi inserirne delle nuove in ogni momento.<br>&#8595; Digitala qua sotto &#8595;</p>
+                                    <p>Non sono presenti attività per oggi, puoi inserirne delle nuove in ogni momento.</p>
                                 </div>
                                 <hr> 
                             </div>
@@ -51,6 +51,23 @@
                                 </li>
                             </ul>
                         </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="text-center">
+                        <div v-if="tasks.length === 0">
+                            <p>&#8595; Digitala qua sotto &#8595;</p>
+                        </div>
+                    </div>
+                    <div class="col-10">
+                        <div class="content">
+                            <div class>
+                                <input v-model="newTaskText" class="form-control focus-ring focus-ring-secondary" style="--bs-focus-ring-x: 10px; --bs-focus-ring-y: 10px; --bs-focus-ring-blur: 4px" type="text" placeholder="Scrivi una cosa da fare" name="newTaskText" id="newTaskText" @keyup.enter="addNewTask(newTaskText)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-primary" type="submit" @click="addNewTask(newTaskText)">Aggiungi</button>
                     </div>
                 </div>
             </div>
